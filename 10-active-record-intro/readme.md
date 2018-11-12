@@ -8,7 +8,6 @@
 ### - Step 3 - Verify schema (in console - 'Model.new')
 
 ## Takeaways
-
 - ActiveRecord does a lot of the heavy lifting for you when creating your database and models and when searching your DB, so you spend more building your apps
 
 - Migrations specifically change the schema i.e. what information we want it to hold

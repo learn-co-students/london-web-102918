@@ -1,0 +1,5 @@
+# gems
+# activeRecord
+# scraping
+
+

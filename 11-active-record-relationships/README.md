@@ -1,14 +1,10 @@
-[bit of news](https://www.nytimes.com/2018/09/28/technology/facebook-hack-data-breach.html)
-
 # ActiveRecord Relationships
 
 - Where does ActiveRecord come from again?
 - What' this ORM thing?
 - Migrations?
-- wat
-- Model vs Class vs Table // WAT
+- Model vs Class vs Table
 - CRUD
-- WUT
 
 ## Our domain today - Pizza
 

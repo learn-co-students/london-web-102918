@@ -1,0 +1,22 @@
+<h1>Edit Dog</h1>
+
+<a href="/dogs/<%= @dog.id %>">Go back</a>
+
+<form action="/dogs/<%= @dog.id %>" method="post">
+  <input type="hidden" name="_method" value="patch" />
+
+  <div>
+    <label for="">name:</label>
+    <input type="text" name="dog[name]" value="<%= @dog.name %>" />
+  </div>
+  <div>
+    <label for="">age:</label>
+    <input type="text" name="dog[age]" value="<%= @dog.age %>" />
+  </div>
+  <input type="submit" value="Edit Dog" />
+</form>
+
+<form action="/dogs/<%= @dog.id %>" method="post">
+  <input type="hidden" name="_method" value="delete" />
+  <input id="mysubmit" type="submit" value="Delete Dog" />
+</form>

@@ -1,0 +1,5 @@
+<h1> Hello, this is the Dishes page </h1>
+
+<% @dishes.each do |dish| %>
+  <p> <%= dish.name %> | £<%= dish.price %> </p>
+<% end %>

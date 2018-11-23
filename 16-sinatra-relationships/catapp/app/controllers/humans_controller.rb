@@ -11,6 +11,7 @@ class HumansController < ApplicationController
   end
 
   post "/humans" do
+    binding.pry
     human = Human.create(params[:human])
     redirect "/humans/#{human.id}"
   end
@@ -27,6 +28,7 @@ class HumansController < ApplicationController
   end
 
   patch "/humans/:id" do
+    binding.pry
     human = Human.find(params[:id])
     human.update(params[:human])
     redirect "/humans/#{human.id}"

@@ -1,5 +1,6 @@
 class DoctorsController < ApplicationController
   before_action :find_doctor, only: [:show, :edit, :update, :destroy]
+
   def index
     @doctors = Doctor.all
   end
@@ -13,31 +14,29 @@ class DoctorsController < ApplicationController
 
   def create
     @doctor = Doctor.create(doctor_params)
-    byebug
     redirect_to doctor_path(@doctor)
-    # we will see! v4 vs v5
   end
 
   def edit
   end
 
   def update
-    @doctor.update(name: params[:doctor][:name], specialty: params[:doctor][:specialty])
-    redirect doctor
+    @doctor.update(doctor_params)
+    redirect_to doctor
   end
 
   def destroy
     @doctor.destroy
-    redirect doctors_path
+    redirect_to doctors_path
   end
 
   private
 
-  def find_doctor
-    @doctor = Doctor.find(params[:id])
-  end
-
   def doctor_params
     params.require(:doctor).permit(:name, :specialty)
+  end
+
+  def find_doctor
+    @doctor = Doctor.find(params[:id])
   end
 end

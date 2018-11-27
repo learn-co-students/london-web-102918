@@ -2,4 +2,12 @@
 <h2>👩‍⚕️👨‍⚕️🏥 </h2>
 <p> This doctor's specialty (not spiecliality) 🇺🇸 is: <%= @doctor.specialty %> </p>
 
+<% if @doctor.office %>
+  <p>This doctor works in <%= @doctor.office.address %> </p>
+<% else %>
+  <p>Still looking for a place to treat people</p>
+<% end %>
+
+
+<%= link_to 'edit me', edit_doctor_path(@doctor) %>
 <%= link_to 'go back', doctors_path %>

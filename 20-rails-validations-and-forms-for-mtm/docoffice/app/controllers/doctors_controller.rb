@@ -15,7 +15,12 @@ class DoctorsController < ApplicationController
 
   def create
     @doctor = Doctor.create(doctor_params)
-    redirect_to doctor_path(@doctor)
+    if @doctor.valid?
+      redirect_to doctor_path(@doctor)
+    else
+      flash[:errors] = @doctor.errors.full_messages
+      redirect_to new_doctor_path
+    end
   end
 
   def edit
@@ -23,7 +28,13 @@ class DoctorsController < ApplicationController
 
   def update
     @doctor.update(doctor_params)
-    redirect_to doctor_path(@doctor)
+    if @doctor.valid?
+      redirect_to doctor_path(@doctor)
+    else
+      flash[:errors] = @doctor.errors.full_messages
+      redirect_to edit_doctor_path(@doctor)
+    end
+
   end
 
   def destroy

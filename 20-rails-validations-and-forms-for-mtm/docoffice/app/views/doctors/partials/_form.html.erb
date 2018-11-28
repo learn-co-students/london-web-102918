@@ -1,0 +1,11 @@
+<%= form_for @doctor do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :specialty %>
+  <%= f.text_field :specialty %>
+
+  <%= f.collection_select :office_id, @offices, :id, :address %>
+
+  <%= f.submit %>
+<% end %>

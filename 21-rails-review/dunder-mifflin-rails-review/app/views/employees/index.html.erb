@@ -1,0 +1,5 @@
+<ul>
+    <% Employee.all.each do |employee| %>
+        <li><%= link_to "#{employee.first_name} #{employee.last_name}", employee_path(employee) %></li>
+    <% end %>
+</ul>

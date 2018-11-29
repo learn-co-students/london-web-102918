@@ -1,0 +1,19 @@
+<% if flash[:errors] %>
+  <% flash[:errors].each do |e| %>
+    <p style="color: red;"> <%= e %> </p>
+  <% end %>
+<% else %>
+    <p>what a nice little doctor</p>
+<% end %>
+
+<%= form_for @doctor do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :specialty %>
+  <%= f.text_field :specialty %>
+
+  <%= f.collection_select :office_id, @offices, :id, :address %>
+
+  <%= f.submit %>
+<% end %>

@@ -4,4 +4,8 @@ class Office < ApplicationRecord
   validates :address, uniqueness: true
   validates :capacity, numericality: { only_integer: true }
   validates :capacity, numericality: { less_than_or_equal_to: 30 }
+
+  def capacity_and_address
+    "capacity: #{self.capacity}, address: #{self.address}"
+  end
 end

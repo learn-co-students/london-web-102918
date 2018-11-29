@@ -1,6 +1,7 @@
 class DoctorsController < ApplicationController
   before_action :find_doctor, only: [:show, :edit, :update, :destroy]
   before_action :find_offices, only: [:new, :edit]
+  before_action :find_patients, only: [:new, :edit]
 
   def index
     @doctors = Doctor.all
@@ -45,7 +46,7 @@ class DoctorsController < ApplicationController
   private
 
   def doctor_params
-    params.require(:doctor).permit(:name, :specialty, :office_id)
+    params.require(:doctor).permit(:name, :specialty, :office_id, patient_ids: [])
   end
 
   def find_doctor
@@ -53,6 +54,10 @@ class DoctorsController < ApplicationController
   end
 
   def find_offices
-    @offices = Office.all
+    @offices = Office.all.sort_by {|o| o.capacity }
+  end
+
+  def find_patients
+    @patients = Patient.all.sort_by {|p| p.name }.reverse
   end
 end

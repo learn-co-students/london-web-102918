@@ -8,6 +8,14 @@
   <p>Still looking for a place to treat people</p>
 <% end %>
 
+<ul>
+  <% if @doctor.patients.length > 0 %>
+    <p>They are treating these poor souls:</p>
+    <% @doctor.patients.each do |patient| %>
+      <li> <%= patient.name %> </li>
+    <% end %>
+  <% end %>
+</ul>
 
 <%= link_to 'edit me', edit_doctor_path(@doctor) %>
 <%= link_to 'go back', doctors_path %>

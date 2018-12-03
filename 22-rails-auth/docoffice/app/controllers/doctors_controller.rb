@@ -4,10 +4,23 @@ class DoctorsController < ApplicationController
   before_action :find_patients, only: [:new, :edit]
 
   def index
-    @doctors = Doctor.all
+    if session[:doctors_seen]
+      @doctors = Doctor.all
+        .select do |d|
+          !session[:doctors_seen].include?(d.id)
+        end
+    else
+      @doctors = Doctor.all
+    end
   end
 
   def show
+    if session[:doctors_seen]
+      session[:doctors_seen] << @doctor.id
+    else
+      session[:doctors_seen] = []
+      session[:doctors_seen] << @doctor.id
+    end
   end
 
   def new

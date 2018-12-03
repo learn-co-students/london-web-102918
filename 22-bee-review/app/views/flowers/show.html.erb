@@ -1,0 +1,6 @@
+
+<%= @flower.name %>
+<%= @flower.pollen_capacity %>
+<% @flower.bees.each do |bee| %>
+  <%= link_to bee.name, bee %>
+<% end %>

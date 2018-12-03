@@ -1,0 +1,5 @@
+<% @flowers.each do |flower| %>
+  <%= link_to flower.name, flower %>
+<% end %>
+
+<%= link_to "Make new flower", new_flower_path %>

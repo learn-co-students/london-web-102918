@@ -1,0 +1,13 @@
+<h1> all doctors </h1>
+
+<%= link_to "create a new doc", new_doctor_path %>
+
+<ul>
+  <% @doctors.each do |doc| %>
+    <li>
+      <p>
+        <%= link_to doc.name, doc %>
+      </p>
+    </li>
+  <% end %>
+</ul>

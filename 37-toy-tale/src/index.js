@@ -43,6 +43,13 @@ const renderAllToys = toys => {
 }
 
 // We render a div on the page
+/*
+  toy = {
+  name: "",
+  image: ""
+  id: 0
+}
+*/
 const renderSingleToy = toy => {
   const toyEl = document.createElement('div')
   toyEl.className = 'card'
@@ -141,7 +148,6 @@ const handleToyLike = event => {
 
 
 // event listener isn't added globally, buy above when we renderSingleToy ^^^
-
 
 // Bonus: Allow the user to delete a toy
 const handleToyDelete = (event) => {

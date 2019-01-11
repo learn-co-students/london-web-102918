@@ -1,0 +1,19 @@
+{
+  "pokemons": [
+    {
+      "id": 1,
+      "name": "pikachu",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"
+    },
+    {
+      "name": "Jigglypuff",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/039.png",
+      "id": 2
+    },
+    {
+      "name": "Dummy",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkwHQvNKlH8Kbdwl8ukh9R8-ZJeXnx5kyczbffbNyAkj7iJmFIqQ",
+      "id": 3
+    }
+  ]
+}

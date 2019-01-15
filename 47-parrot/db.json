@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Lets DANCE!!!!",
+      "authorId": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "Meh, not really.",
+      "postId": 1,
+      "authorId": 2
+    }
+  ],
+  "profiles": [
+    {
+      "id": 1,
+      "name": "Queen P",
+      "avatar": "https://media.giphy.com/media/xjLmqWGXgdmEZnHeWY/giphy.gif"
+    },
+    {
+      "id" :2,
+      "name": "NaySayer",
+      "avatar":"https://media.giphy.com/media/g69ZPJfLy7hD2/giphy.gif"
+    }
+  ]
+}

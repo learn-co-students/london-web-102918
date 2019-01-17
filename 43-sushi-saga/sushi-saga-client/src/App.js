@@ -7,7 +7,7 @@ const API = "http://localhost:3000/sushis"
 
 class App extends Component {
 
-  state={
+  state = {
     sushis: [],
     counter:0,
     eaten:[],

@@ -6,26 +6,11 @@ import PaintingForm from './PaintingForm'
 import PaintingsList from './PaintingsList'
 import PaintingDetails from './PaintingDetails'
 
-<<<<<<< HEAD
-class App extends Component {
-  state = {
-    paintings: data,
-    selectedPainting: null
-  }
-
-  selectPainting = selectedPainting => {
-    this.setState({ selectedPainting })
-  }
-
-  deselectPainting = () => {
-    this.setState({ selectedPainting: null })
-=======
 import { Route, Switch } from 'react-router-dom'
 
 class App extends Component {
   state = {
     paintings: data,
->>>>>>> 0336cd0e8998d1bba671b4ca05dcab9e767853a7
   }
 
   addNewPainting = (paintingData) => {
@@ -39,20 +24,6 @@ class App extends Component {
   render() {
     const { selectedPainting } = this.state
     const { selectPainting, deselectPainting } = this
-<<<<<<< HEAD
-  
-    return <div>
-      <Navbar title='Paintr' subtitle="Collect them all!"/>
-      
-      {
-        selectedPainting
-          ? <PaintingDetails selectedPainting={selectedPainting} deselectPainting={deselectPainting} />
-          : [
-            <PaintingForm handleAddNewPainting={this.addNewPainting}/>,
-            <PaintingsList selectPainting={selectPainting} paintings={this.state.paintings} />
-          ]
-      }
-=======
 
     return <div>
       <Navbar title='Paintr' subtitle="Collect them all!"/>
@@ -87,14 +58,8 @@ class App extends Component {
           component={() => <h1> Page not found </h1>}
         />
       </Switch>
->>>>>>> 0336cd0e8998d1bba671b4ca05dcab9e767853a7
     </div>
   }
 }
 
 export default App;
-<<<<<<< HEAD
-
-// React.createElement(PaintingsList, {paintings: data}, null)
-=======
->>>>>>> 0336cd0e8998d1bba671b4ca05dcab9e767853a7

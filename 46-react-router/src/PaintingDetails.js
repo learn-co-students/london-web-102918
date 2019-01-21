@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import './PaintingDetails.css'
 
-const PaintingDetails = ({ selectedPainting, deselectPainting }) =>
+const PaintingDetails = ({ selectedPainting }) =>
   <div class='painting-details'>
     <h3>{selectedPainting.title}</h3>
     <figure>
@@ -11,7 +12,7 @@ const PaintingDetails = ({ selectedPainting, deselectPainting }) =>
     </figure>
     <h3>Author: { selectedPainting.artist.name } ({ selectedPainting.artist.hometown })</h3>
     <p>{selectedPainting.artist.birthday} - {selectedPainting.artist.deathday}</p>
-    <p><button onClick={deselectPainting}>GO BACK</button></p>
+    <p><Link to='/paintings'><button>GO BACK</button></Link></p>
   </div>
 
 export default PaintingDetails

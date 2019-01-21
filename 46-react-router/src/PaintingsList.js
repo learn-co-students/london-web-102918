@@ -5,12 +5,10 @@ import './PaintingList.css'
 
 class PaintingsList extends React.Component {
   render () {
-    const { selectPainting } = this.props
-    return (<div class="ui list">
+    return (<div className="ui list">
       {this.props.paintings.map(currentPainting => (
         <Painting
           key={currentPainting.id}
-          selectPainting={selectPainting}
           paintingData={currentPainting}
         />
       ))}

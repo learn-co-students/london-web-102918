@@ -4,4 +4,10 @@ import './index.css'
 import 'semantic-ui-css/semantic.css'
 import App from './App'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+import { BrowserRouter as Router } from "react-router-dom";
+
+ReactDOM.render(
+  <Router>
+    <App />
+  </Router>,
+document.getElementById('root'))
